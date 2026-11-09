@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: ai-developer-assistant
+
+server:
+  port: ${SERVER_PORT:8080}
+
+ollama:
+  base-url: ${OLLAMA_BASE_URL:http://localhost:11434}
+  model: ${OLLAMA_MODEL:qwen2.5-coder:3b}
+  timeout-seconds: ${OLLAMA_TIMEOUT_SECONDS:120}
+
+logging:
+  level:
+    com.example.ai: INFO

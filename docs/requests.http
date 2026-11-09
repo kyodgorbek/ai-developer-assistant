@@ -1,0 +1,28 @@
+### Java health
+GET http://localhost:8080/api/v1/java/health
+
+### Kotlin health
+GET http://localhost:8080/api/v1/kotlin/health
+
+### Java chat
+POST http://localhost:8080/api/v1/java/ai/chat
+Content-Type: application/json
+
+{
+  "message": "Explain what a Java record is.",
+  "systemPrompt": "You are a concise senior Java engineer."
+}
+
+### Kotlin chat
+POST http://localhost:8080/api/v1/kotlin/ai/chat
+Content-Type: application/json
+
+{
+  "message": "Explain what a Kotlin data class is."
+}
+
+### Validation error (400)
+POST http://localhost:8080/api/v1/java/ai/chat
+Content-Type: application/json
+
+{ "message": "" }
